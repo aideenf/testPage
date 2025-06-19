@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+    *{box-sizing:border-box;padding:0;margin:0}
+    body,html{max-width:100vw;overflow-x:hidden}
+    body{font-family:Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;font-weight:400;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;color:#39364f}
+    :root{--SmallButtonHeight:24px;--MediumButtonHeight:32px;--LargeButtonHeight:44px;--SmallButtonPadding:0 8px;--MediumButtonPadding:0 20px;--LargeButtonPadding:0 32px;--ButtonBorderRadius:4px;--ButtonBorderWidth:2px;--ButtonBorderColor:#a9a8b3;--ButtonTextColor:#1e0a3c;--ButtonBackgroundColor:#fff;--ButtonBackgroundColorHover:#f8f7fa;--ButtonBorderColorHover:#6f7287;--ButtonBackgroundColorActive:#eeedf2;--ButtonBorderColorActive:#6f7287;--ButtonFocusOutline:#585163;--ButtonPrimaryBackgroundColor:#d1410c;--ButtonPrimaryTextColor:#fff;--ButtonPrimaryBackgroundColorHover:#9f2c15;--ButtonPrimaryBackgroundColorActive:#bd3a20;--ButtonPrimaryBackgroundColorDisabled:#f8f7fa;--ButtonTextColorDisabled:#a9a8b3;--ButtonSecondaryBackgroundColorDisabled:#fff;--ButtonSecondaryBorderColorDisabled:#eeedf2;--ButtonGhostTextColor:#3659e3;--ButtonGhostTextColorHover:#3659e3;--ButtonGhostTextColorActive:#304fc9;--ButtonGhostBackgroundColorHover:#f8f7fa;--ButtonGhostBackgroundColorActive:#eeedf2;--ButtonGhostBorderColorHover:#f8f7fa;--ButtonGhostBorderColorActive:#eeedf2}
+    .Button_root__j2zr8{font-family:Neue Plak,-apple-system,blinkmacsystemfont,roboto,Helvetica Neue,helvetica,tahoma,arial,sans-serif;font-weight:400;font-size:16px;line-height:16px;text-rendering:optimizelegibility;font-size:.875rem;line-height:1.25rem;font-weight:600;border:var(--ButtonBorderWidth) solid var(--ButtonBorderColor);border-radius:var(--ButtonBorderRadius);box-sizing:border-box;position:relative}
+    @media (max-width:792px){.Button_root__j2zr8{font-size:1rem;line-height:1.5rem}}
+    .Button_primary__j2zr8{background-color:var(--ButtonPrimaryBackgroundColor);color:var(--ButtonPrimaryTextColor);fill:var(--ButtonPrimaryTextColor);border:2px solid transparent}
+    .Button_defaultSize__j2zr8{height:var(--LargeButtonHeight);padding:var(--LargeButtonPadding)}
+    .Typography_root__487rx{font-family:Neue Plak,-apple-system,blinkmacsystemfont,roboto,Helvetica Neue,helvetica,tahoma,arial,sans-serif;font-weight:400;font-size:16px;line-height:16px;text-rendering:optimizelegibility;box-sizing:border-box;text-align:inherit;color:var(--TypographyColor)}
+    .Typography_root__487rx.Typography_heading-lg__487rx{font-size:3.25rem;line-height:4rem;font-weight:800}
+    @media (max-width:792px){.Typography_root__487rx.Typography_heading-lg__487rx{font-size:2rem;line-height:2.5rem}}
+    .Typography_root__487rx.Typography_align-center__487rx{text-align:center}
+    .Wrapper_root__I0U__{width:100%;margin:4px;padding:0 4px}
+    @media (min-width:960px){.Wrapper_root__I0U__{max-width:1200px;margin:0 auto}.Layout_layout__Tv7my{display:flex}}
+    .EventHero_eventHero__n9pLj{position:relative;max-width:var(--container-max-width);margin:0 auto 16px;text-align:center;max-height:50vw;overflow:hidden;font-size:0;background-color:#fff;border-bottom-right-radius:calc(3*var(--base-unit));border-bottom-left-radius:calc(3*var(--base-unit))}
+    @media (min-width:940px){.EventHero_eventHero__n9pLj{max-height:470px}}
+    @media (min-width:1200px){.EventHero_root__hzXJa{background-image:url("data:image/svg+xml;charset=utf8,%3Csvg width='1676' height='430' viewBox='0 0 1676 430' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(https://www.eventbrite.com/e/_next/static/css/%23clip0_3405_50198)'%3E%3Cpath d='M1669.31 -124.702C1704.63 -198.281 1599.75 -278.89 1440.21 -219.509C1280.67 -160.128 1138.67 -174.472 940.588 -234.668C588.163 -341.792 438.492 -309.897 215.804 -220.763C150.423 -195.199 15.9418 -122.33 0.814447 -35.3897C-18.0424 73.26 298.334 62.7189 143.288 203.358C-11.7568 343.996 26.7216 552.457 835.628 313.658C939.215 283.079 1109.58 269.122 1259.68 366.729C1409.78 464.336 1549.16 434.834 1602.55 362.937C1716.96 208.836 1609.92 -1.08292 1669.31 -124.702Z' fill='%23EDF1FC'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_3405_50198'%3E%3Crect width='1676' height='430' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");background-position:top;background-repeat:no-repeat;padding-top:calc(4*var(--base-unit))}
+    .EventHero_eventHero__n9pLj{border-radius:calc(3*var(--base-unit))}
+    }
+    .EventHero_eventHero__n9pLj img{max-width:940px;position:relative;width:100%;height:auto;z-index:1}
+    .EventHero_eventHeroBackground__rIfsl{background-size:cover;background-repeat:no-repeat;background-position:50%;max-width:var(--container-max-width);margin:0 auto;position:absolute;top:0;left:0;width:100%;height:100%;text-align:center;filter:blur(50px) brightness(.9);z-index:0}
+    .ConversionBar_wrapper__NJQyh{text-align:center}
+    .Layout_layout__Tv7my{width:100%}
+    .Layout_aside__II5Lj{z-index:3}
+    @media (min-width:960px){.Layout_aside__II5Lj{flex:1 1;max-width:360px;margin-left:auto;padding-top:calc(8*var(--base-unit));padding-right:calc(3*var(--base-unit))}}
+    .css-bkxe9g{position:static}
+    .css-zlw0cr{overflow:hidden;max-width:940px;margin:auto}
+    .css-1y7ne21{margin:0 auto;max-width:940px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%}
+    .css-sji9w3{text-align:center;-webkit-flex:0 0 100%;-ms-flex:0 0 100%;flex:0 0 100%}
+    .css-sji9w3 img{max-width:940px;width:100%;height:auto}
+  </style>
     <meta charSet="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <link rel="canonical" href="https://www.eventbrite.com/e/black-music-city-black-music-month-celebration-tickets-1363567660579"/>
