@@ -4,6 +4,11 @@
       <meta charSet="utf-8"/>
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
       <meta http-equiv="Content-Language" content="en"/>
+
+   //preconnect establishes early TCP + TLS connections.
+   //crossorigin is required when the request might involve CORS (which it does here).
+   //dns-prefetch is a safe fallback and cheap for earlier DNS resolution.
+   //Including both is a good pattern if you’re unsure when the connection will be used.
        <link rel="preconnect" href="https://cdntranscend.eventbrite.com" crossorigin>
       <link rel="dns-prefetch" href="https://cdntranscend.eventbrite.com">
       <link rel="preconnect" href="https://cdn.evbstatic.com" crossorigin>
