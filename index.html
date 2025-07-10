@@ -5,31 +5,30 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
       <meta http-equiv="Content-Language" content="en"/>
 
-   //preconnect establishes early TCP + TLS connections.
-   //crossorigin is required when the request might involve CORS (which it does here).
-   //dns-prefetch is a safe fallback and cheap for earlier DNS resolution.
-   //Including both is a good pattern if you’re unsure when the connection will be used.
+   <!--
+   preconnect establishes early TCP + TLS connections.
+   crossorigin is required when the request might involve CORS (which it does here).
+   dns-prefetch is a safe fallback and cheap for earlier DNS resolution.
+   Including both is a good pattern if you’re unsure when the connection will be used. -->
+   
        <link rel="preconnect" href="https://cdntranscend.eventbrite.com" crossorigin>
       <link rel="dns-prefetch" href="https://cdntranscend.eventbrite.com">
       <link rel="preconnect" href="https://cdn.evbstatic.com" crossorigin>
       <link rel="dns-prefetch" href="https://cdn.evbstatic.com">
       <link rel="preconnect" href="https://synctranscend.eventbrite.com" crossorigin>
       <link rel="dns-prefetch" href="https://synctranscend.eventbrite.com">
-
-//next section is a non-blocking preload + lazy stylesheet load pattern.
-//rel="preload": Starts downloading the CSS early without blocking render.
-//as="style": Tells the browser the type of resource (required for preload).
-//onload=...: Once loaded, swaps to rel='stylesheet' to apply styles.
-//<noscript> fallback: Ensures styles load if JS is disabled.
-//Important Notes:
-//- Safe with chunked styles
-//   Chunked files (like checkout--23.53.0--eds-4.3.113.css) are fine to preload as long as the path is known early.
-
-//- Test render behavior
-//Occasionally, preloading too aggressively or without correctly matching the styles used above the fold can delay first paint. Use Lighthouse or WebPageTest to measure.
-//
-//-  Don’t preload everything
-//Preloading too many files can clog the preload scanner and block more important resources.
+ <!--
+ next section is a non-blocking preload + lazy stylesheet load pattern.
+rel="preload": Starts downloading the CSS early without blocking render.
+as="style": Tells the browser the type of resource (required for preload).
+onload=...: Once loaded, swaps to rel='stylesheet' to apply styles.
+<noscript> fallback: Ensures styles load if JS is disabled.
+Important Notes:
+- Safe with chunked styles - Chunked files (like checkout--23.53.0--eds-4.3.113.css) are fine to preload as long as the path is known early.
+- Test render behavior - Occasionally, preloading too aggressively or without correctly matching the styles used above the fold can delay first paint. Use Lighthouse or WebPageTest to measure.
+-  Don’t preload everything
+Preloading too many files can clog the preload scanner and block more important resources.
+ -->
 
       <link rel="preload" as="style" href="https://cdn.evbstatic.com/s3-build/fe/build/checkout--23.53.0--eds-4.3.113.css" onload="this.onload=null;this.rel='stylesheet'">
       <noscript><link rel="stylesheet" href="https://cdn.evbstatic.com/s3-build/fe/build/checkout--23.53.0--eds-4.3.113.css"></noscript>
