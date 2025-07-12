@@ -217,7 +217,17 @@ Preloading too many files can clog the preload scanner and block more important 
          });
          // Passing ad click, client ID, and session ID information in URLs
          gtag('set', 'url_passthrough', true);
-      </script><script data-cfasync="false" src="https://cdntranscend.eventbrite.com/cm/f2747157-cf59-4ef1-8703-018defe51764/airgap.js" data-sync-endpoint="https://synctranscend.eventbrite.com/consent-manager/f2747157-cf59-4ef1-8703-018defe51764" data-ui-z-index="550" data-tracker-overrides="[...] GoogleConsentMode:security_storage=Essential" data-protect-realms="self" data-ui-shadow-root="open" data-local-sync="allow-network-observable"></script><script type="text/javascript">  const regimes = window.airgap && window.airgap.getRegimes ? window.airgap.getRegimes() : null;
+      </script>
+      <script data-cfasync="false" 
+         src="src="https://aideenf.github.io/FullTestPage/airgap.js"
+         data-sync-endpoint="https://synctranscend.eventbrite.com/consent-manager/f2747157-cf59-4ef1-8703-018defe51764" 
+         data-ui-z-index="550" data-tracker-overrides="[...] GoogleConsentMode:security_storage=Essential" 
+         data-protect-realms="self" 
+         data-ui-shadow-root="open" 
+         data-local-sync="allow-network-observable">
+         
+         </script>
+      <script type="text/javascript">  const regimes = window.airgap && window.airgap.getRegimes ? window.airgap.getRegimes() : null;
          const defaultRegime = regimes ? regimes.values().next().value : "CPRA";
          console.log("Regime detected is "+ defaultRegime + ", loading transcend")
          
